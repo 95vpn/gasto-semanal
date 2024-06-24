@@ -1,0 +1,102 @@
+:root {
+    --bg-body: #222;
+    --bg-alt: #1f1f1f;
+    --txt-body: #f0f0f0;
+    --family-body: monospace;
+  
+    --header-height: 60px;
+    --primary-color: cyan;
+  }
+  
+  .light {
+    --bg-body: #fff;
+    --bg-alt: #f2f2f2;
+    --txt-body: #222;
+    --primary-color: blueviolet;
+  }
+  
+  html {
+    font-size: 62.5%;
+    line-height: 1.5;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-color: var(--bg-body);
+    color: var(--txt-body);
+    font-family: var(--family-body);
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.container{
+    border: 1px solid;
+
+}
+
+.contenido-principal{
+    border: 1px solid greenyellow;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contenido-primario{
+    border: 1px solid fuchsia;
+}
+
+.contenido-secundario{
+    border: 1px solid chocolate;
+}
+
+.contenido-tercero{
+    border: 1px solid rgb(96, 158, 185);
+}
+
+/* javascript */
+.mensaje {
+  text-align: center;
+}
+
+.alert-error {
+  font-size: bold;
+  text-align: center;
+  text-decoration: uppercase;
+  border: 1px solid rgb(212, 4, 4);
+}
+
+.alert-exito{
+  font-size: bold;
+  text-align: center;
+  text-decoration: uppercase;
+  border: 1px solid greenyellow;
+}
+
+.listado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crear-button{
+  border: 1px solid rgb(212, 4, 4);
+}
