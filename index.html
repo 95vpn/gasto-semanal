@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css">
+    
 </head>
 <body>
     <div class="container">
@@ -30,27 +31,31 @@
             </div>
             <div class="contenido-secundario">
                 <h2>Listado</h2>
-                <div id="gastos">
+                <div class="gastos" id="gastos">
                     <ul class="list-gatos"></ul>
                 </div>
                 <div id="presupuesto" class="presupuesto">
                     <div class="alerta">
                         <p>Presupuesto: $<span id="total"></span></p>
                     </div>
-                    <div>
+                    <div class="restante">
                         <p>Restante: $<span id="restante"></span></p>
                     </div>
                 </div>
             </div>
-            <div class="contenido-tercero">
-                <canvas id="myDoughnutChart" width="400" height="400"></canvas>
-            </div>
         </section>
+        <div class="contenido-tercero">
+            <canvas class="canvas" id="myDoughnutChart" width="500" height="500" ></canvas>
+        </div>
     </div>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/app.js"></script>
-    <script src="./js/dataColors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Styles for charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    
+    
 
 </body>
 </html>
