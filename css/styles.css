@@ -27,7 +27,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -57,24 +57,30 @@ img {
   align-items: center;
   flex-direction: column;
   /* flex-wrap: wrap; */
-  width: 100%;
+  /* width: 100%; */
   /* height: 100vh; */
+  padding: 30px;
+  
+}
+header{
+  text-align: center;
+  padding: 20px;
 }
 
 .envoltura{
-  position: absolute;
-  top: -500px;
-  left: 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: end;
-  /* height: 300px; */
 }
 
-.cubo{
+
+.envoltura div:nth-child(1){
   position: absolute;
   width: 150px;
   height: 150px;
+  top: -500px;
+  left: 0;
   transform-style: preserve-3d;
   /* transform: rotateY(35deg) rotateX(-38deg); */
   /* transform: rotateX(75deg); */
@@ -83,59 +89,285 @@ img {
   animation-duration: 15s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  box-shadow: 0 0 5px;
-  /* animation-delay: 9000ms; */
+  box-shadow: 0 30px 15px greenyellow;
 }
+
+.envoltura div:nth-child(2){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: 250px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 1000ms;
+}
+
+.envoltura div:nth-child(3){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: -250px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 2000ms;
+}
+
+.envoltura div:nth-child(4){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: -500px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 3000ms;
+}
+
+.envoltura div:nth-child(5){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: 500px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 4000ms;
+}
+
+.envoltura div:nth-child(6){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: 750px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 5000ms;
+}
+
+.envoltura div:nth-child(7){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: -125px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 6000ms;
+}
+
+.envoltura div:nth-child(8){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: 125px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 7000ms;
+}
+
+.envoltura div:nth-child(8){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: 375px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 8000ms;
+}
+
+.envoltura div:nth-child(9){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: -375px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 9000ms;
+}
+
+.envoltura div:nth-child(10){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: 625px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 9000ms;
+}
+
+.envoltura div:nth-child(11){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: -625px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 10000ms;
+}
+
+.envoltura div:nth-child(12){
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -500px;
+  left: 875px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(35deg) rotateX(-38deg); */
+  /* transform: rotateX(75deg); */
+  transition: 3000ms easy-in-out;
+  animation-name: mover-derecha;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 30px 15px greenyellow;
+  animation-delay: 11000ms;
+}
+
 
 @keyframes mover-derecha {
   0%{
-    
-    top: 0;
-  }
-  25%{
-    top: 200px
+    top: -500px;
+    transform: scale(.1);
   }
   50%{
-    transform: scale(.5);
-    top: 700px;}
-  75%{
-    top: 1000px;
+    top: 500px;
+    transform: scale(.1) rotateX(360deg);
   }
   100%{
-    top: 0;
+    top: -500px;
+    transform: scale(.7) rotateX(360deg);
   }
 }
 
 .contenido-principal {
-  /* display: flex;
+  display: flex;
   flex-wrap: wrap;
-  gap: 40px; */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  flex-wrap: wrap;
-  
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px;
+  padding: 20px;
 }
 
 .contenido-primario {
+  height: 300px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+}
+
+.contenido-primario h2{
+  margin-bottom: 50px;
 }
 
 .contenido-primario form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
+  width: 300px;
+  margin-top: 10px;
+ 
+  
+}
+#agregar-gasto{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .form-group{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .form-group label{
   display: flex;
@@ -147,6 +379,7 @@ img {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  
 }
 
 .form-control{
@@ -208,52 +441,58 @@ img {
 .contenido-secundario {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 500px;
+  /* padding: 20px; */
 }
 
-.contenido-secundario{
-  display: flex;
-  justify-content: space-between;
-  
-}
+
 .presupuesto {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  width: 300px;
 }
 
 .presupuesto div {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .contenido-tercero {
-  
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chartjs-size-monitor{
+  margin: 0 auto;
 }
 
 .gastos {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: auto;
   padding: 20px;
-  margin: 0;
+  /* margin: 0; */
 }
 
 .alerta {
   background-color: rgb(137, 126, 112);
-  padding: 10px;
+  padding: 7px;
   gap: 20px;
-  width: 100%;
+  width: auto;
 }
 
 .restante {
   background-color: rgb(137, 126, 112);
-  padding: 10px;
+  padding: 7px;
   gap: 20px;
 }
 
@@ -261,15 +500,17 @@ img {
   background-color: rgb(249, 191, 2);
   padding: 10px;
   gap: 20px;
+  color: black;
 }
 
 .restante-rojo{
   background-color: rgb(249, 22, 2);
+  color: black;
   padding: 20px;
   gap: 20px;
 }
 
-#myDoughnutChart{
+/* #myDoughnutChart{
   width: 500px;
   height: 500px;
 }
@@ -279,15 +520,15 @@ img {
     width: 300px;
     height: 300px;
   }
-}
+} */
 
 
 canvas {
   /* background-color: rgb(205, 212, 198); */
   color: white;
   display: flex;
-  width: 150px;
-  height: 150px;
+  /* width: 150px;
+  height: 150px; */
 }
 
 /* javascript */
@@ -299,9 +540,8 @@ canvas {
   font-size: bold;
   text-align: center;
   text-decoration: uppercase;
-  border: 1px solid rgb(106, 252, 2);
-  border: 1px solid rgb(148, 212, 19);
-  border: 1px solid rgb(127, 165, 102);
+  border: 1px solid rgb(252, 23, 2);
+  
 }
 
 .alert-exito {

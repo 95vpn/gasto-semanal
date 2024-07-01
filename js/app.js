@@ -3,7 +3,10 @@
 //variables y selectores
 const formulario = document.querySelector('#agregar-gasto');
 const gastoLista = document.querySelector('#gastos ul');
+const mensaje = document.querySelector('#mensajes')
+const gastoCantidad = document.querySelector('#gasto')
 
+console.log(gastoCantidad)
 
 //eventos
 eventListeners();
@@ -50,6 +53,7 @@ class UI {
     imprimirAlerta(mensaje, tipo) {
         //crear el div
         const divMensaje = document.createElement('div');
+        divMensaje.style.marginBottom='20px'
         divMensaje.classList.add('mensaje')
 
         if (tipo === 'error') {
@@ -62,7 +66,7 @@ class UI {
         divMensaje.textContent = mensaje;
 
         //insertar en el HTML
-        document.querySelector('.contenido-primario').insertBefore(divMensaje, formulario)
+        document.querySelector('.contenido-primario').insertBefore( divMensaje, formulario)
 
         //quitar el html
         setTimeout(() => {
@@ -80,6 +84,8 @@ class UI {
             const nuevoGasto = document.createElement('li');
             nuevoGasto.style.textAlign = 'center'
             nuevoGasto.classList.add('listado');
+            nuevoGasto.style.width='300px';
+            nuevoGasto.style.overflow='auto'
             nuevoGasto.setAttribute('data-id', id);
 
             console.log(nuevoGasto)
@@ -143,6 +149,8 @@ class UI {
             ui.imprimirAlerta('El presupuesto se ha agotado', 'error')
 
             formulario.querySelector('button[type="submit"]').disabled = true;
+        } else {
+            formulario.querySelector('button[type="submit"]').disabled = false;
         }
     }
 }
@@ -222,8 +230,8 @@ function eliminarGasto(id) {
 
 const styles = {
     color: {
-        solids: ['rgba(106, 252, 2, 1)', 'rgba(148, 212, 19, 1)', 'rgba(217, 158, 43, 1)', 'rgba(127, 165, 102, 1)', 'rgba(156, 153, 204, 1)', 'rgba(225, 78, 202, 1)'],
-        alphas: ['rgba(106, 252, 2, .2)', 'rgba(148, 212, 19, .2)', 'rgba(217, 158, 43, .2)', 'rgba(127, 165, 102, .2)', 'rgba(156, 153, 204, .2)', 'rgba(225, 78, 202, .2)']
+        solids: ['rgba(106, 252, 2, 1)', 'rgba(148, 212, 19, 1)', 'rgba(217, 158, 43, 1)', 'rgba(127, 165, 102, 1)', 'rgba(156, 153, 204, 1)', 'rgba(225, 78, 202, 1)', 'rgba(225, 255, 0, 1)', 'rgba(111, 140, 112, 1)', 'rgba(106, 252, 2, 1)'],
+        alphas: ['rgba(106, 252, 2, .2)', 'rgba(148, 212, 19, .2)', 'rgba(217, 158, 43, .2)', 'rgba(127, 165, 102, .2)', 'rgba(156, 153, 204, .2)', 'rgba(225, 78, 202, .2)', 'rgba(225, 255, 0, 1)', 'rgba(111, 140, 112, 1)', 'rgba(0, 255, 174, 1)',]
     }
 }
 
@@ -237,7 +245,7 @@ const renderModelsChart = () => {
             labels: ['Presupuesto', ...presupuesto.gastos.map(gasto => gasto.nombre)],
             datasets: [{
                 data: [presupuesto.restante, ...presupuesto.gastos.map(gasto => gasto.cantidad)],
-                borderWidth: 1,
+                borderWidth: 2,
                 borderColor: styles.color.solids.map(eachColor => eachColor),
                 backgroundColor: styles.color.alphas.map(eachColor => eachColor)
             }],
@@ -246,9 +254,23 @@ const renderModelsChart = () => {
             legend: {
                 position: 'right',
                 labels: {
-                    fontColor: '#010101'
+                    fontColor: '#fff',
+                    fontSize:24,
+                    font: {
+                        size: 24
+                    }
                 }
-            }
+            },
+            responsive: true,
+                maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        top: 0,
+                        right: 0,
+                        bottom: 0,
+                        left: 0
+                    }
+                },
         }
 
         const ctx = document.getElementById('myDoughnutChart').getContext('2d');
@@ -259,7 +281,6 @@ const renderModelsChart = () => {
 
         myDoughnutChart = new Chart(ctx, { type: 'doughnut', data, options })
     }
-
 }
 
 const actualizarGrafico = () => {
@@ -288,7 +309,11 @@ document.addEventListener('DOMContentLoaded', () => {
             legend: {
                 position: 'right',
                 labels: {
-                    fontColor: '#010101'
+                    fontColor: '#fff',
+                    fontSize:20,
+                    font: {
+                        size: 20
+                    }
                 }
             }
         }

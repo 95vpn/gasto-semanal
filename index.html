@@ -9,6 +9,23 @@
 </head>
 <body>
     <div class="container">
+        <div class="overlay1">
+            <div class="envoltura">
+              
+                <div></div> 
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              
+            </div>
         <header>
             <h1 class="title">Gasto Semanal</h1>
         </header>
@@ -16,6 +33,7 @@
         <section class="contenido-principal">
             <div class="contenido-primario">
                 <h2>Añade tus gastos aquí</h2>
+                <div id="mensajes"></div>
                 <form id="agregar-gasto">
                     <div class="form-group">
                         <label for="gasto">Gasto:</label>
@@ -43,10 +61,10 @@
                     </div>
                 </div>
             </div>
+            <div class="contenido-tercero">
+                <canvas class="canvas" id="myDoughnutChart" width="400" height="400" ></canvas>
+            </div>
         </section>
-        <div class="contenido-tercero">
-            <canvas class="canvas" id="myDoughnutChart" width="500" height="500" ></canvas>
-        </div>
     </div>
     
     <script src="./js/app.js"></script>
